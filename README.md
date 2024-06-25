@@ -46,5 +46,5 @@ To run the application:
 
 ## Authors
 
-- Mohammed Tayev
+- Mohammed Tayeb
 
