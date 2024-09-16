@@ -1,0 +1,32 @@
+name: Build and Run Java Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+
+    - name: Install Apache Ant
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ant
+
+    - name: Build with Ant
+      run: |
+        ant -f build.xml
+
+    - name: Run JAR
+      run: |
+        java -cp dist/FantasyFootballTeamManager.jar fantasyfootballteammanager.FantasyFootballTeamManager
