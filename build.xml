@@ -25,7 +25,7 @@
         <mkdir dir="${dist.dir}"/>
         <jar destfile="${dist.dir}/FantasyFootballTeamManager.jar" basedir="${build.dir}">
             <manifest>
-                <attribute name="Main-Class" value="your.main.ClassName"/>
+                <attribute name="Main-Class" value="FantasyFootballTeamManager"/>
             </manifest>
         </jar>
     </target>
